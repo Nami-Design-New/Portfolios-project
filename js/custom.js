@@ -13,6 +13,37 @@ $(document).ready(function () {
       $("header").removeClass("headerAnimate");
     }
   });
+  // 
+  $(document).ready(function () {
+    $('.tablinksItem').click(function () {
+      $('.tablinksItem').removeClass('active');
+      $(this).addClass('active');
+
+      $('.tabContentItem').removeClass('active');
+      var index = $(this).index();
+      $('.tabContentItem').eq(index).addClass('active');
+    });
+  });
+  //mainSwiper
+  var mainSwiper = new Swiper(".mainSwiper", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    // effect: "fade",
+    speed: 500,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".mainSwiperPagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".mainSwiperNext",
+      prevEl: ".mainSwiperPrev",
+    },
+  });
 
 });
 // ////////////////////////////////////////
