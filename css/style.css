@@ -842,7 +842,7 @@ footer .copyR img {
 }
 @media (max-width: 768px) {
   .intro {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 .intro .introTitle {
@@ -1023,10 +1023,10 @@ footer .copyR img {
 }
 .intro .introVideo .video::before {
   content: "";
-  top: -670px;
-  left: 20px;
-  width: 915px;
-  height: 915px;
+  top: -80%;
+  left: 0px;
+  width: 50vw;
+  height: 50vw;
   position: absolute;
   border-radius: 50%;
   background-color: var(--mainColor);
@@ -1035,10 +1035,10 @@ footer .copyR img {
 }
 .intro .introVideo .video::after {
   content: "";
-  top: -280px;
-  left: -350px;
-  width: 915px;
-  height: 915px;
+  top: -50%;
+  left: 30%;
+  width: 50vw;
+  height: 50vw;
   opacity: 0.45;
   position: absolute;
   border-radius: 50%;
@@ -1135,7 +1135,6 @@ footer .copyR img {
 }
 @media only screen and (max-width: 768px) {
   .partners .mainImg {
-    order: 2;
     height: 200px;
   }
 }
