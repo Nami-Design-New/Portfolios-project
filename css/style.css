@@ -652,8 +652,8 @@ header .dropdown:hover .dropdown-content {
 .headerAnimate {
   box-shadow: var(--BigShadow);
   padding: 0 5px;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
   background: rgba(255, 255, 255, 0.9019607843);
 }
 
@@ -1229,9 +1229,19 @@ footer .copyR img {
   flex-direction: column;
   gap: 32px;
 }
+@media (max-width: 768px) {
+  .services {
+    padding: 10px;
+  }
+}
 .services .tabs {
   padding: 24px;
   padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .services .tabs {
+    padding: 10px 0;
+  }
 }
 .services .tabs .tablinks {
   display: flex;
@@ -1266,7 +1276,6 @@ footer .copyR img {
   background-color: transparent;
   transform: rotate(45deg);
   border-radius: 20px 4px 4px 4px;
-  transition: var(--transition);
   z-index: -1;
 }
 .services .tabs .tablinks .tablinksItem.active {
@@ -1280,6 +1289,11 @@ footer .copyR img {
   transition: var(--transition);
   padding: 20px 8px 8px;
 }
+@media (max-width: 768px) {
+  .services .tabs .tabContent {
+    padding: 20px 0 0;
+  }
+}
 .services .tabs .tabContent .tabContentItem {
   display: none;
   transition: var(--transition);
@@ -1289,13 +1303,12 @@ footer .copyR img {
 }
 .services .tabs .presence {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 .services .tabs .presence .col {
   flex: 1;
   min-width: 300px;
-  padding: 10px;
   position: relative;
 }
 .services .tabs .presence .mainSwiper {
@@ -1357,8 +1370,8 @@ footer .copyR img {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 10px;
-  bottom: 10px;
+  left: -5px;
+  bottom: -5px;
   z-index: 3;
   border-radius: 8px;
   flex-direction: column;
@@ -1388,6 +1401,24 @@ footer .copyR img {
   font-style: italic;
   color: #777;
 }
+.services .tabs .videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.services .tabs .videos .video {
+  flex: 1;
+  min-width: 300px;
+}
+.services .tabs .videos .video video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3/2;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
 .services .tabs .gallery .inner {
   margin: auto;
   display: flex;
@@ -1397,6 +1428,7 @@ footer .copyR img {
 .services .tabs .gallery .inner a {
   flex: 1;
   display: flex;
+  flex-direction: column;
   height: 250px;
   min-width: 10vw;
   background-color: rgba(245, 245, 245, 0.3137254902);
