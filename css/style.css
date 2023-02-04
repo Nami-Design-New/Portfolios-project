@@ -1120,12 +1120,6 @@ footer .copyR img {
   align-items: center;
   isolation: isolate;
 }
-@media only screen and (max-width: 768px) {
-  .partners {
-    background-color: var(--whiteColor);
-    box-shadow: var(--BigShadow);
-  }
-}
 .partners .mainImg {
   flex: 1;
   position: relative;
@@ -1232,6 +1226,7 @@ footer .copyR img {
 @media (max-width: 768px) {
   .services {
     padding: 10px;
+    margin: 50px auto;
   }
 }
 .services .tabs {
