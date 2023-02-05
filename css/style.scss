@@ -98,7 +98,6 @@ img {
 }
 body {
   background: url(../img/BG.jpg);
-
   overflow-x: hidden;
 }
 input {
@@ -183,7 +182,6 @@ input {
         filter: invert(1);
       }
     }
-   
   }
   .swiper-button-next {
     left: -60px;
@@ -318,7 +316,6 @@ content {
       display: flex;
       align-items: center;
       gap: 8px;
-
       &::after {
         content: "//";
         color: var(--mainColor);
@@ -779,7 +776,6 @@ footer {
   outline: none;
   font-size: 15px;
   transition: var(--transition);
-
   img {
     width: 20px;
     height: 20px;
@@ -1012,7 +1008,6 @@ footer {
     }
   }
 }
-
 .partners {
   width: min(100% - 20px, 1320px);
   margin: 50px auto;
@@ -1028,7 +1023,6 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   isolation: isolate;
-
   // &::before{
   //   content: '';
   //   position: absolute;
@@ -1039,13 +1033,11 @@ footer {
   //   background-color: var(--mainColor);
   //   display: block;
   // }
-
   .mainImg {
     flex: 1;
     position: relative;
     min-width: 300px;
     height: 400px;
-
     @media only screen and (max-width: 768px) {
       height: 200px;
       margin-bottom: 20px;
@@ -1087,10 +1079,8 @@ footer {
     //   z-index: 1;
     // }
   }
-
   .info {
     min-width: 300px;
-
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -1146,11 +1136,9 @@ footer {
     }
   }
 }
-
 .services {
   width: min(100% - 20px, 1320px);
   padding: 30px;
-
   margin: 100px auto;
   background-color: var(--whiteColor);
   border-radius: 16px;
@@ -1176,7 +1164,6 @@ footer {
       padding: 0;
       transition: var(--transition);
       border-radius: 8px;
-
       .tablinksItem {
         transition: var(--transition);
         flex: 1;
@@ -1211,7 +1198,6 @@ footer {
         }
       }
     }
-
     .tabContent {
       transition: var(--transition);
       padding: 20px 8px 8px;
@@ -1221,7 +1207,6 @@ footer {
       .tabContentItem {
         display: none;
         transition: var(--transition);
-
         &.active {
           display: block;
         }
@@ -1236,7 +1221,6 @@ footer {
         min-width: 300px;
         position: relative;
       }
-
       .mainSwiper {
         position: relative;
         img {
@@ -1267,7 +1251,6 @@ footer {
       }
       .swiper-button-prev {
         right: 10px;
-
         left: unset;
         top: unset;
         bottom: 10px;
@@ -1285,7 +1268,6 @@ footer {
           background-color: var(--whiteColor);
         }
       }
-
       .experience {
         padding: 30px;
         padding-top: 15px;
@@ -1307,19 +1289,16 @@ footer {
           margin-bottom: 2px;
         }
       }
-
       .tabInner {
         display: flex;
         flex-direction: column;
         gap: 16px;
         padding: 40px 0;
-
         ul {
           padding: 10px;
           margin: 0;
           li {
             padding: 8px 0;
-
             color: #777;
             font-weight: bold;
           }
@@ -1368,7 +1347,6 @@ footer {
             object-fit: cover;
             border-radius: 16px;
           }
-
           &:nth-child(4n) {
             min-width: 20vw;
           }
@@ -1387,7 +1365,6 @@ footer {
     }
   }
 }
-
 .clients {
   display: flex;
   flex-direction: column;
@@ -1447,7 +1424,6 @@ footer {
     background: linear-gradient(#68b42ee0, #68b42ecf), url(../img/clientsBG.jpg);
     padding: 80px;
     padding-left: 20px;
-
     background-size: cover;
     background-attachment: fixed;
     border-radius: 8px;
@@ -1503,16 +1479,19 @@ footer {
     }
   }
 }
-
 .testimonials {
   width: min(100% - 20px, 1320px);
-  margin: auto;
-  margin-bottom: 50px;
+  margin: 50px auto;
+  background-color: var(--whiteColor);
+  border-radius: 16px;
+  display: flex;
+  padding-top: 30px;
+  gap: 48px;
+  flex-direction: column;
   .swiper-slide {
     height: auto;
   }
   .card {
-    background-color: var(--whiteColor);
     padding: 16px;
     border-radius: 16px;
     display: flex;
@@ -1564,7 +1543,6 @@ footer {
           object-fit: cover;
           border-radius: 16px;
         }
-
         &:nth-child(4n) {
           min-width: 30vw;
         }
@@ -1584,34 +1562,91 @@ footer {
   .swiperContainer .swiper-button-next,
   .swiperContainer .swiper-button-prev {
     border-radius: 100px;
+    background-color: var(--mainColor);
+    &::after {
+      filter: invert(1);
+    }
   }
   @media (max-width: 768px) {
     .swiper-slide {
       height: 100%;
-
     }
-    .card{
+    .card {
       padding-top: 70px;
     }
     .swiperContainer .swiper-button-next,
     .swiperContainer .swiper-button-prev {
       top: 40px;
-      left: 45%;
+      left: 44%;
       right: unset;
-      background-color: var(--mainColor);
       width: 50px;
       height: 50px;
       transform: none;
-      &::after{
-        filter: invert(1);
-      }
     }
     .swiperContainer .swiper-button-next {
       transform: translateX(-60%);
-
     }
     .swiperContainer .swiper-button-prev {
       transform: translateX(60%);
+    }
+  }
+
+  .swiper-slide.swiper-slide-active {
+    .client img{
+      animation: fadeInUp 1s 0s both;
+
+    }
+    h3 {
+      animation: fadeInUp 1s .5s both;
+
+    }
+    p {
+      animation: fadeInUp 1s 1s both;
+    }
+    .work {
+      animation: fadeIn 1s 1s both;
+      &:nth-child(2) {
+        animation: fadeIn 1s 1.2s both;
+      }
+      &:nth-child(3) {
+        animation: fadeIn 1s 1.4s both;
+      }
+      &:nth-child(4) {
+        animation: fadeIn 1s 1.6s both;
+      }
+      &:nth-child(5) {
+        animation: fadeIn 1s 1.8s both;
+      }
+      &:nth-child(6) {
+        animation: fadeIn 1s 2s both;
+      }
+      &:nth-child(7) {
+        animation: fadeIn 1s 2.2s both;
+      }
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+      to {
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+    .fadeInUp {
+      animation-name: fadeInUp;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    .fadeIn {
+      animation-name: fadeIn;
     }
   }
 }

@@ -86,11 +86,11 @@ $(document).ready(function () {
 
   //testimonialsSlider
   var testimonialsSlider = new Swiper(".testimonialsSlider", {
-    spaceBetween: 0,
+    spaceBetween: 50,
     centeredSlides: true,
     // loop: true,
     // effect: "fade",
-    // speed: 500,
+    speed: 500,
     // autoplay: {
     //   delay: 4000,
     //   disableOnInteraction: false,
