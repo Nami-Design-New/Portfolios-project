@@ -1538,6 +1538,7 @@ footer .copyR img {
   border-radius: 16px;
 }
 .clients .swiperContainer .swiper-slide img {
+  padding: 8px;
   width: 100%;
   aspect-ratio: 1/1;
   -o-object-fit: contain;
@@ -1579,7 +1580,6 @@ footer .copyR img {
 .testimonials {
   width: min(100% - 20px, 1320px);
   margin: 50px auto;
-  background-color: var(--whiteColor);
   border-radius: 16px;
   display: flex;
   padding-top: 30px;
@@ -1590,6 +1590,7 @@ footer .copyR img {
   height: auto;
 }
 .testimonials .card {
+  background-color: var(--whiteColor);
   padding: 16px;
   border-radius: 16px;
   display: flex;
@@ -1778,4 +1779,104 @@ footer .copyR img {
 .testimonials .swiper-slide.swiper-slide-active .fadeIn {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
+}
+
+.package {
+  width: min(100% - 20px, 1320px);
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 30px 16px;
+  border-radius: 16px;
+  text-align: center;
+}
+.package h1 {
+  font-weight: bold;
+}
+.package form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.package form .form-check {
+  padding: 5px;
+  flex: 1;
+  text-align: center;
+  min-width: 200px;
+}
+.package form .form-check .form-check-input {
+  display: none;
+}
+.package form .form-check .form-check-label {
+  transition: var(--transition);
+  background-color: var(--whiteColor);
+  padding: 20px;
+  border-radius: 16px;
+  border: 3px solid #f9f9f9;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+}
+.package form .form-check .form-check-label .info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.package form .form-check .form-check-label .info h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.package form .form-check .form-check-label .info p {
+  color: #777;
+}
+.package form .form-check .form-check-label .info ul {
+  padding: 8px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+}
+.package form .form-check .form-check-label .price {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  background-color: #eee;
+  color: var(--textColor);
+  display: flex;
+  flex-direction: column;
+  border-radius: 100px;
+  padding: 12px 12px;
+  font-size: 10px;
+  transition: var(--transition);
+}
+.package form .form-check .form-check-label .price strong {
+  font-size: 20px;
+}
+.package form .form-check .form-check-label img {
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  min-width: 60px;
+  max-width: 100px;
+  max-height: 100px;
+}
+.package form .form-check .form-check-input:checked ~ .form-check-label {
+  border: 3px solid var(--mainColor);
+  box-shadow: 0px 0px 20px #eee;
+}
+.package form .form-check .form-check-input:checked ~ .form-check-label .price {
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+}
+.package form .btnDiv {
+  width: 100%;
+  justify-content: center;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
