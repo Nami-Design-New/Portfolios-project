@@ -614,6 +614,7 @@ header .dropdown {
   margin: 0 5px;
   max-width: 100%;
   gap: 8px;
+  font-weight: bold;
 }
 header .dropdown .dropdown-content {
   visibility: hidden;
@@ -1453,4 +1454,114 @@ footer .copyR img {
   .services .tabs .gallery .inner {
     gap: 4px;
   }
+}
+
+.clients {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 50px 0;
+}
+.clients .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .clients .top {
+    flex-direction: column;
+  }
+}
+.clients .top .text {
+  flex: 1;
+  padding-right: 120px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20px;
+}
+@media (max-width: 992px) {
+  .clients .top .text {
+    padding-right: 20px;
+  }
+}
+.clients .top .text strong {
+  font-size: 100px;
+  color: var(--mainColor);
+  line-height: 0.8;
+  margin: 10px 0;
+}
+@media (max-width: 992px) {
+  .clients .top .text strong {
+    font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .clients .top .text strong {
+    font-size: 40px;
+  }
+}
+.clients .top .text strong span {
+  font-weight: bold;
+}
+.clients .top .text p {
+  color: var(--textColor);
+}
+.clients .swiperContainer {
+  width: 70%;
+  background: linear-gradient(rgba(104, 180, 46, 0.8784313725), rgba(104, 180, 46, 0.8117647059)), url(../img/top.jpg);
+  padding: 80px;
+  padding-left: 20px;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 8px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+@media (max-width: 768px) {
+  .clients .swiperContainer {
+    padding: 20px 20px;
+    width: 95%;
+    border-radius: 16px;
+  }
+}
+.clients .swiperContainer .swiper-slide {
+  background-color: var(--whiteColor);
+  padding: 12px 16px;
+  height: 100%;
+  border-radius: 16px;
+}
+.clients .swiperContainer .swiper-slide img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.clients .swiperContainer .swiper-button-next {
+  left: unset;
+  right: -30px;
+  transform: translateY(25px);
+  border-radius: 100px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--mainColor);
+  border: 5px solid #fff;
+}
+.clients .swiperContainer .swiper-button-next::after {
+  filter: invert(1);
+}
+.clients .swiperContainer .swiper-button-prev {
+  right: -30px;
+  left: unset;
+  transform: translateY(-45px);
+  border-radius: 100px;
+  width: 60px;
+  height: 60px;
+  background-color: var(--mainColor);
+  border: 5px solid #fff;
+}
+.clients .swiperContainer .swiper-button-prev::after {
+  filter: invert(1);
 }/*# sourceMappingURL=style.css.map */

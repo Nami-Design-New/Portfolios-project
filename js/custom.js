@@ -44,6 +44,46 @@ $(document).ready(function () {
       prevEl: ".mainSwiperPrev",
     },
   });
+  //clientsSlider
+  var clientsSlider = new Swiper(".clientsSlider", {
+    spaceBetween: 10,
+    loop: true,
+    // effect: "fade",
+    speed: 1000,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".clientsSliderPagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".clientsSliderNext",
+      prevEl: ".clientsSliderPrev",
+    },
+    breakpoints: {
+      0: {
+        slidesPerView: 3,
+      },
+     
+      467: {
+        slidesPerView: 4,
+      },
+     
+      768: {
+        slidesPerView: 3,
+      },
+      992: {
+        slidesPerView: 4,
+      },
+    
+      1200: {
+        slidesPerView: 5,
+      },
+    },
+  });
+
 
 });
 // ////////////////////////////////////////
