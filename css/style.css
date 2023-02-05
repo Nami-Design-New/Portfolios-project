@@ -888,6 +888,15 @@ footer .copyR img {
 .defaultBtn.two:hover::before {
   background-color: var(--mainColor);
 }
+.defaultBtn.black {
+  background-color: var(--blackColor);
+}
+.defaultBtn.black:hover {
+  color: var(--whiteColor);
+}
+.defaultBtn.black:hover::before {
+  background-color: #000;
+}
 
 .intro {
   width: min(100% - 20px, 1200px);
@@ -1782,33 +1791,20 @@ footer .copyR img {
 }
 
 .package {
-  width: min(100% - 20px, 1320px);
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  padding: 30px 16px;
-  border-radius: 16px;
-  text-align: center;
-}
-.package h1 {
-  font-weight: bold;
-}
-.package form {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
-.package form .form-check {
+.package .form-check {
   padding: 5px;
   flex: 1;
   text-align: center;
   min-width: 200px;
 }
-.package form .form-check .form-check-input {
+.package .form-check .form-check-input {
   display: none;
 }
-.package form .form-check .form-check-label {
+.package .form-check .form-check-label {
   transition: var(--transition);
   background-color: var(--whiteColor);
   padding: 20px;
@@ -1823,11 +1819,11 @@ footer .copyR img {
   position: relative;
   isolation: isolate;
 }
-.package form .form-check .form-check-label::after {
+.package .form-check .form-check-label::after {
   content: "";
   width: 150px;
   height: 150px;
-  background-color: rgba(238, 238, 238, 0.062745098);
+  background-color: rgba(238, 238, 238, 0.4392156863);
   position: absolute;
   top: 0;
   left: 0;
@@ -1836,11 +1832,11 @@ footer .copyR img {
   border-top-left-radius: 16px;
   transition: var(--transition);
 }
-.package form .form-check .form-check-label::before {
+.package .form-check .form-check-label::before {
   content: "";
   width: 130px;
   height: 130px;
-  background-color: rgba(238, 238, 238, 0.1882352941);
+  background-color: rgba(238, 238, 238, 0.5647058824);
   position: absolute;
   top: 0;
   left: 0;
@@ -1849,23 +1845,23 @@ footer .copyR img {
   border-top-left-radius: 16px;
   transition: var(--transition);
 }
-.package form .form-check .form-check-label .info {
+.package .form-check .form-check-label .info {
   display: flex;
   flex-direction: column;
   gap: 8px;
   text-align: start;
 }
-.package form .form-check .form-check-label .info h3 {
+.package .form-check .form-check-label .info h3 {
   font-weight: bold;
   margin-bottom: 10px;
   font-size: 20px;
   color: var(--mainColor);
 }
-.package form .form-check .form-check-label .info p {
+.package .form-check .form-check-label .info p {
   color: #777;
   font-weight: normal;
 }
-.package form .form-check .form-check-label .info ul {
+.package .form-check .form-check-label .info ul {
   padding: 8px 0;
   padding-right: 16px;
   margin: 0;
@@ -1874,10 +1870,10 @@ footer .copyR img {
   gap: 4px;
   list-style: decimal;
 }
-.package form .form-check .form-check-label .info ul li {
+.package .form-check .form-check-label .info ul li {
   font-size: 13px;
 }
-.package form .form-check .form-check-label .price {
+.package .form-check .form-check-label .price {
   position: absolute;
   left: 10px;
   top: 10px;
@@ -1890,10 +1886,10 @@ footer .copyR img {
   font-size: 10px;
   transition: var(--transition);
 }
-.package form .form-check .form-check-label .price strong {
+.package .form-check .form-check-label .price strong {
   font-size: 20px;
 }
-.package form .form-check .form-check-label img {
+.package .form-check .form-check-label img {
   aspect-ratio: 1/1;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1901,22 +1897,253 @@ footer .copyR img {
   max-width: 100px;
   max-height: 100px;
 }
-.package form .form-check .form-check-input:checked ~ .form-check-label {
+.package .form-check .form-check-input:checked ~ .form-check-label {
   border: 3px solid var(--mainColor);
   box-shadow: var(--BigShadow);
 }
-.package form .form-check .form-check-input:checked ~ .form-check-label::after {
+.package .form-check .form-check-input:checked ~ .form-check-label::after {
   background-color: var(--mainColor10);
 }
-.package form .form-check .form-check-input:checked ~ .form-check-label::before {
+.package .form-check .form-check-input:checked ~ .form-check-label::before {
   background-color: var(--mainColor30);
 }
-.package form .form-check .form-check-input:checked ~ .form-check-label .price {
+.package .form-check .form-check-input:checked ~ .form-check-label .price {
   background-color: var(--mainColor);
   color: var(--whiteColor);
 }
-.package form .btnDiv {
+.package .btnDiv {
   width: 100%;
   justify-content: center;
   display: flex;
+}
+
+.multiSteps {
+  width: min(100% - 20px, 1320px);
+  margin: 50px auto;
+  background-color: var(--whiteColor);
+  padding: 30px 16px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.multiSteps .progress {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.multiSteps .progress .progressBtn {
+  flex: 1;
+  transition: var(--transition);
+  position: relative;
+  padding-top: 20px;
+  color: #b9b9b9;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  cursor: pointer;
+}
+.multiSteps .progress .progressBtn:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  display: block;
+  width: 13px;
+  height: 13px;
+  content: "";
+  transform: translateX(-50%);
+  transition: var(--transition);
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 3;
+}
+.multiSteps .progress .progressBtn:after {
+  position: absolute;
+  top: 5px;
+  right: calc(-50% - 6.5px);
+  transition-property: all;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  display: block;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: currentColor;
+  z-index: 1;
+}
+.multiSteps .progress .progressBtn:first-child:after {
+  display: none;
+}
+.multiSteps .progress .progressBtn.jsActive {
+  color: var(--mainColor);
+}
+.multiSteps .progress .progressBtn.jsActive span {
+  color: var(--textColor);
+}
+.multiSteps .progress .progressBtn.jsActive:before {
+  transform: translateX(-50%) scale(1.2);
+  background-color: currentColor;
+}
+.multiSteps .form {
+  position: relative;
+}
+.multiSteps .form .panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 8px;
+}
+.multiSteps .form .panel.jsActive {
+  height: auto !important;
+  opacity: 1;
+  visibility: visible;
+}
+.multiSteps .form .panel[data-animation=scaleIn] {
+  transform: scale(0.9);
+}
+.multiSteps .form .panel[data-animation=scaleIn].jsActive {
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+  transform: scale(1);
+}
+.multiSteps .btnGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+.multiSteps .btnGroup .jsBtnNext {
+  margin-right: auto;
+}
+.multiSteps .defaultBtn {
+  display: inline-flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px 30px;
+  color: var(--whiteColor);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-transform: capitalize;
+  background-color: var(--mainColor);
+  border: none;
+  outline: none;
+  font-size: 15px;
+  transition: var(--transition);
+}
+.multiSteps .defaultBtn img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media only screen and (max-width: 991px) {
+  .multiSteps .defaultBtn {
+    padding: 8px 20px;
+  }
+}
+.multiSteps .defaultBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: var(--secondColor);
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  transition: var(--transition);
+}
+.multiSteps .defaultBtn:hover {
+  color: var(--whiteColor);
+  box-shadow: var(--BigShadow);
+  transform: translateY(-3px);
+}
+.multiSteps .defaultBtn:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+.multiSteps .defaultBtn.two {
+  background-color: var(--secondColor);
+}
+.multiSteps .defaultBtn.two:hover {
+  color: var(--whiteColor);
+}
+.multiSteps .defaultBtn.two:hover::before {
+  background-color: var(--mainColor);
+}
+.multiSteps .defaultBtn.black {
+  background-color: var(--blackColor);
+}
+.multiSteps .defaultBtn.black:hover {
+  color: var(--whiteColor);
+}
+.multiSteps .defaultBtn.black:hover::before {
+  background-color: #000;
+}
+
+.userSelection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  padding: 0 100px;
+}
+@media (max-width: 768px) {
+  .userSelection {
+    padding: 0;
+  }
+}
+.userSelection .userInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--mainColor10);
+  padding: 20px;
+  border-radius: 16px;
+  min-width: 250px;
+}
+.userSelection .selections {
+  min-width: 250px;
+  flex: 1;
+}
+.userSelection .selections h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: var(--mainColor);
+}
+.userSelection .selections p {
+  color: #777;
+  font-weight: normal;
+}
+.userSelection .selections ul {
+  padding: 8px 0;
+  padding-right: 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: decimal;
+}
+.userSelection .selections ul li {
+  font-size: 14px;
 }/*# sourceMappingURL=style.css.map */
