@@ -1401,7 +1401,7 @@ footer {
     align-items: center;
     margin-bottom: 50px;
     gap: 24px;
-    @media  (max-width: 768px) {
+    @media (max-width: 768px) {
       flex-direction: column;
     }
     .text {
@@ -1411,22 +1411,32 @@ footer {
       flex-direction: column;
       text-align: center;
       font-size: 20px;
-      @media  (max-width: 992px) {
+      @media (max-width: 992px) {
         padding-right: 20px;
       }
       strong {
-        font-size: 100px;
+        font-size: 70px;
         color: var(--mainColor);
         line-height: 0.8;
-        margin: 10px 0;
-        @media  (max-width: 992px) {
+        margin: auto;
+        margin-bottom: 20px;
+        background-color: var(--whiteColor);
+        width: 200px;
+        box-shadow: var(--BigShadow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        padding: 30px 20px;
+        @media (max-width: 992px) {
           font-size: 60px;
         }
-        @media  (max-width: 768px) {
+        @media (max-width: 768px) {
           font-size: 40px;
         }
         span {
           font-weight: bold;
+          margin-top: 2px;
         }
       }
       p {
@@ -1436,16 +1446,16 @@ footer {
   }
   .swiperContainer {
     width: 70%;
-    background: linear-gradient(#68b42ee0, #68b42ecf), url(../img/top.jpg);
-    padding: 80px ;
+    background: linear-gradient(#68b42ee0, #68b42ecf), url(../img/clientsBG.jpg);
+    padding: 80px;
     padding-left: 20px;
-   
+
     background-size: cover;
     background-attachment: fixed;
     border-radius: 8px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    @media  (max-width: 768px) {
+    @media (max-width: 768px) {
       padding: 20px 20px;
       width: 95%;
       border-radius: 16px;

@@ -1488,10 +1488,19 @@ footer .copyR img {
   }
 }
 .clients .top .text strong {
-  font-size: 100px;
+  font-size: 70px;
   color: var(--mainColor);
   line-height: 0.8;
-  margin: 10px 0;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: var(--whiteColor);
+  width: 200px;
+  box-shadow: var(--BigShadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 30px 20px;
 }
 @media (max-width: 992px) {
   .clients .top .text strong {
@@ -1505,13 +1514,14 @@ footer .copyR img {
 }
 .clients .top .text strong span {
   font-weight: bold;
+  margin-top: 2px;
 }
 .clients .top .text p {
   color: var(--textColor);
 }
 .clients .swiperContainer {
   width: 70%;
-  background: linear-gradient(rgba(104, 180, 46, 0.8784313725), rgba(104, 180, 46, 0.8117647059)), url(../img/top.jpg);
+  background: linear-gradient(rgba(104, 180, 46, 0.8784313725), rgba(104, 180, 46, 0.8117647059)), url(../img/clientsBG.jpg);
   padding: 80px;
   padding-left: 20px;
   background-size: cover;
