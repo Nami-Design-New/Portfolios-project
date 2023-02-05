@@ -1818,30 +1818,64 @@ footer .copyR img {
   height: 100%;
   display: flex;
   gap: 16px;
-  align-items: center;
   flex-direction: column;
   cursor: pointer;
   position: relative;
+  isolation: isolate;
+}
+.package form .form-check .form-check-label::after {
+  content: "";
+  width: 150px;
+  height: 150px;
+  background-color: rgba(238, 238, 238, 0.062745098);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-bottom-right-radius: 200px;
+  border-top-left-radius: 16px;
+  transition: var(--transition);
+}
+.package form .form-check .form-check-label::before {
+  content: "";
+  width: 130px;
+  height: 130px;
+  background-color: rgba(238, 238, 238, 0.1882352941);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  border-bottom-right-radius: 200px;
+  border-top-left-radius: 16px;
+  transition: var(--transition);
 }
 .package form .form-check .form-check-label .info {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  text-align: start;
 }
-.package form .form-check .form-check-label .info h2 {
+.package form .form-check .form-check-label .info h3 {
   font-weight: bold;
   margin-bottom: 10px;
+  font-size: 20px;
+  color: var(--mainColor);
 }
 .package form .form-check .form-check-label .info p {
   color: #777;
+  font-weight: normal;
 }
 .package form .form-check .form-check-label .info ul {
   padding: 8px 0;
+  padding-right: 16px;
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  list-style: none;
+  list-style: decimal;
+}
+.package form .form-check .form-check-label .info ul li {
+  font-size: 13px;
 }
 .package form .form-check .form-check-label .price {
   position: absolute;
@@ -1869,7 +1903,13 @@ footer .copyR img {
 }
 .package form .form-check .form-check-input:checked ~ .form-check-label {
   border: 3px solid var(--mainColor);
-  box-shadow: 0px 0px 20px #eee;
+  box-shadow: var(--BigShadow);
+}
+.package form .form-check .form-check-input:checked ~ .form-check-label::after {
+  background-color: var(--mainColor10);
+}
+.package form .form-check .form-check-input:checked ~ .form-check-label::before {
+  background-color: var(--mainColor30);
 }
 .package form .form-check .form-check-input:checked ~ .form-check-label .price {
   background-color: var(--mainColor);

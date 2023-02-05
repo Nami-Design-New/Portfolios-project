@@ -1440,7 +1440,7 @@ footer {
       height: 100%;
       border-radius: 16px;
       img {
-        padding: 8px ;
+        padding: 8px;
         width: 100%;
         aspect-ratio: 1/1;
         object-fit: contain;
@@ -1593,13 +1593,11 @@ footer {
   }
 
   .swiper-slide.swiper-slide-active {
-    .client img{
+    .client img {
       animation: fadeInUp 1s 0s both;
-
     }
     h3 {
-      animation: fadeInUp 1s .5s both;
-
+      animation: fadeInUp 1s 0.5s both;
     }
     p {
       animation: fadeInUp 1s 1s both;
@@ -1686,35 +1684,68 @@ footer {
         height: 100%;
         display: flex;
         gap: 16px;
-        align-items: center;
         flex-direction: column;
         cursor: pointer;
         position: relative;
+        isolation: isolate;
+
+        &::after {
+          content: "";
+          width: 150px;
+          height: 150px;
+          background-color: #eeeeee10;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          border-bottom-right-radius: 200px;
+          border-top-left-radius: 16px;
+          transition: var(--transition);
+        }
+        &::before {
+          content: "";
+          width: 130px;
+          height: 130px;
+          background-color: #eeeeee30;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -2;
+          border-bottom-right-radius: 200px;
+          border-top-left-radius: 16px;
+          transition: var(--transition);
+        }
 
         .info {
           display: flex;
           flex-direction: column;
           gap: 8px;
-          h2 {
+          text-align: start;
+          h3 {
             font-weight: bold;
             margin-bottom: 10px;
+            font-size: 20px;
+            color: var(--mainColor);
           }
           p {
             color: #777;
+            font-weight: normal;
           }
 
           ul {
             padding: 8px 0;
+            padding-right: 16px;
             margin: 0;
             display: flex;
             flex-direction: column;
             gap: 4px;
-            list-style: none;
-          
+            list-style: decimal;
+            li {
+              font-size: 13px;
+            }
           }
-
         }
-        .price{
+        .price {
           position: absolute;
           left: 10px;
           top: 10px;
@@ -1726,7 +1757,7 @@ footer {
           padding: 12px 12px;
           font-size: 10px;
           transition: var(--transition);
-          strong{
+          strong {
             font-size: 20px;
           }
         }
@@ -1740,12 +1771,17 @@ footer {
       }
       .form-check-input:checked ~ .form-check-label {
         border: 3px solid var(--mainColor);
-        box-shadow: 0px 0px 20px #eee;
+        box-shadow: var(--BigShadow);
 
-        .price{
+        &::after {
+          background-color: var(--mainColor10);
+        }
+        &::before {
+          background-color: var(--mainColor30);
+        }
+        .price {
           background-color: var(--mainColor);
           color: var(--whiteColor);
-          
         }
       }
     }
