@@ -13,15 +13,15 @@ $(document).ready(function () {
       $("header").removeClass("headerAnimate");
     }
   });
-  // 
+  //
   $(document).ready(function () {
-    $('.tablinksItem').click(function () {
-      $('.tablinksItem').removeClass('active');
-      $(this).addClass('active');
+    $(".tablinksItem").click(function () {
+      $(".tablinksItem").removeClass("active");
+      $(this).addClass("active");
 
-      $('.tabContentItem').removeClass('active');
+      $(".tabContentItem").removeClass("active");
       var index = $(this).index();
-      $('.tabContentItem').eq(index).addClass('active');
+      $(".tabContentItem").eq(index).addClass("active");
     });
   });
   //mainSwiper
@@ -66,25 +66,44 @@ $(document).ready(function () {
       0: {
         slidesPerView: 3,
       },
-     
+
       467: {
         slidesPerView: 4,
       },
-     
+
       768: {
         slidesPerView: 3,
       },
       992: {
         slidesPerView: 4,
       },
-    
+
       1200: {
         slidesPerView: 5,
       },
     },
   });
 
-
+  //testimonialsSlider
+  var testimonialsSlider = new Swiper(".testimonialsSlider", {
+    spaceBetween: 0,
+    centeredSlides: true,
+    // loop: true,
+    // effect: "fade",
+    // speed: 500,
+    // autoplay: {
+    //   delay: 4000,
+    //   disableOnInteraction: false,
+    // },
+    pagination: {
+      el: ".testimonialsSliderPagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".testimonialsSliderNext",
+      prevEl: ".testimonialsSliderPrev",
+    },
+  });
 });
 // ////////////////////////////////////////
 // ////////////////////////////////////////

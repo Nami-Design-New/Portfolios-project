@@ -222,12 +222,6 @@ input {
 .swiperContainer .swiper-button-prev:hover::after {
   filter: invert(1);
 }
-@media (max-width: 768px) {
-  .swiperContainer .swiper-button-next,
-.swiperContainer .swiper-button-prev {
-    display: none;
-  }
-}
 .swiperContainer .swiper-button-next {
   left: -60px;
   right: unset;
@@ -1574,4 +1568,126 @@ footer .copyR img {
 }
 .clients .swiperContainer .swiper-button-prev::after {
   filter: invert(1);
+}
+@media (max-width: 768px) {
+  .clients .swiperContainer .swiper-button-next,
+.clients .swiperContainer .swiper-button-prev {
+    display: none;
+  }
+}
+
+.testimonials {
+  width: min(100% - 20px, 1320px);
+  margin: auto;
+  margin-bottom: 50px;
+}
+.testimonials .swiper-slide {
+  height: auto;
+}
+.testimonials .card {
+  background-color: var(--whiteColor);
+  padding: 16px;
+  border-radius: 16px;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.testimonials .card .client {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-width: 250px;
+}
+.testimonials .card .client img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100px;
+  border: 3px solid #fff;
+  box-shadow: var(--BigShadow);
+  margin-bottom: 10px;
+}
+.testimonials .card .client p {
+  color: var(--textColor);
+}
+.testimonials .card .works {
+  flex: 2;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.testimonials .card .works .work {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  min-width: 15vw;
+  background-color: rgba(245, 245, 245, 0.3137254902);
+  border-radius: 16px;
+  border: 3px solid rgba(245, 245, 245, 0.3137254902);
+}
+.testimonials .card .works .work video,
+.testimonials .card .works .work img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+.testimonials .card .works .work:nth-child(4n) {
+  min-width: 30vw;
+}
+@media (max-width: 768px) {
+  .testimonials .card .works .work {
+    height: 200px;
+    min-width: 30vw;
+  }
+  .testimonials .card .works .work:nth-child(4n) {
+    min-width: 60vw;
+  }
+}
+@media (max-width: 768px) {
+  .testimonials .card .works {
+    gap: 4px;
+  }
+}
+.testimonials .swiperContainer .swiper-button-next,
+.testimonials .swiperContainer .swiper-button-prev {
+  border-radius: 100px;
+}
+@media (max-width: 768px) {
+  .testimonials .swiper-slide {
+    height: 100%;
+  }
+  .testimonials .card {
+    padding-top: 70px;
+  }
+  .testimonials .swiperContainer .swiper-button-next,
+.testimonials .swiperContainer .swiper-button-prev {
+    top: 40px;
+    left: 45%;
+    right: unset;
+    background-color: var(--mainColor);
+    width: 50px;
+    height: 50px;
+    transform: none;
+  }
+  .testimonials .swiperContainer .swiper-button-next::after,
+.testimonials .swiperContainer .swiper-button-prev::after {
+    filter: invert(1);
+  }
+  .testimonials .swiperContainer .swiper-button-next {
+    transform: translateX(-60%);
+  }
+  .testimonials .swiperContainer .swiper-button-prev {
+    transform: translateX(60%);
+  }
 }/*# sourceMappingURL=style.css.map */
