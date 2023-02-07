@@ -2000,7 +2000,9 @@ footer .copyR img {
 }
 .multiSteps .form {
   position: relative;
-  height: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 .multiSteps .form .panel {
   position: absolute;
