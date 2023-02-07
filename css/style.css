@@ -1124,6 +1124,11 @@ footer .copyR img {
   align-items: center;
   isolation: isolate;
 }
+@media (max-width: 768px) {
+  .partners {
+    margin: 10px auto;
+  }
+}
 .partners .mainImg {
   flex: 1;
   position: relative;
@@ -1469,7 +1474,6 @@ footer .copyR img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px;
   gap: 24px;
 }
 @media (max-width: 768px) {
@@ -1597,6 +1601,11 @@ footer .copyR img {
 }
 .testimonials .swiper-slide {
   height: auto;
+}
+@media (max-width: 768px) {
+  .testimonials {
+    margin: 10px auto;
+  }
 }
 .testimonials .card {
   background-color: var(--whiteColor);
@@ -1991,13 +2000,14 @@ footer .copyR img {
 }
 .multiSteps .form {
   position: relative;
+  height: 100%;
 }
 .multiSteps .form .panel {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 0;
+  height: 100%;
   opacity: 0;
   visibility: hidden;
   border-radius: 8px;
@@ -2099,51 +2109,29 @@ footer .copyR img {
   background-color: #000;
 }
 
-.userSelection {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: center;
-  padding: 0 100px;
-}
-@media (max-width: 768px) {
-  .userSelection {
-    padding: 0;
-  }
-}
-.userSelection .userInfo {
-  flex: 1;
+.userInfo {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background: var(--mainColor10);
+  background: #f8f8f8;
   padding: 20px;
   border-radius: 16px;
-  min-width: 250px;
+  width: min(100% - 20px, 800px);
+  margin: auto;
 }
-.userSelection .selections {
-  min-width: 250px;
-  flex: 1;
+.userInfo .form-label {
+  color: var(--blackColor);
 }
-.userSelection .selections h3 {
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 20px;
-  color: var(--mainColor);
+
+.selections {
+  width: min(100% - 20px, 800px);
+  margin: auto;
+  background-color: var(--mainColor10);
+  padding: 20px 10px;
+  border-radius: 16px;
 }
-.userSelection .selections p {
-  color: #777;
-  font-weight: normal;
-}
-.userSelection .selections ul {
-  padding: 8px 0;
-  padding-right: 16px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  list-style: decimal;
-}
-.userSelection .selections ul li {
-  font-size: 14px;
+.selections p {
+  padding: 8px 16px;
+  display: inline-block;
+  width: 48%;
 }/*# sourceMappingURL=style.css.map */

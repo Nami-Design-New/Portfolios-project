@@ -1042,6 +1042,9 @@ footer {
   //   background-color: var(--mainColor);
   //   display: block;
   // }
+  @media (max-width: 768px) {
+    margin: 10px auto;
+  }
   .mainImg {
     flex: 1;
     position: relative;
@@ -1383,7 +1386,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
     gap: 24px;
     @media (max-width: 768px) {
       flex-direction: column;
@@ -1499,6 +1502,9 @@ footer {
   flex-direction: column;
   .swiper-slide {
     height: auto;
+  }
+  @media (max-width: 768px) {
+    margin: 10px auto;
   }
   .card {
     background-color: var(--whiteColor);
@@ -1863,12 +1869,13 @@ footer {
   }
   .form {
     position: relative;
+    height: 100%;
     .panel {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 0;
+      height: 100%;
       opacity: 0;
       visibility: hidden;
       border-radius: 8px;
@@ -1969,50 +1976,32 @@ footer {
   }
 }
 
-.userSelection {
+.userInfo {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 16px;
-  align-items: center;
-  padding: 0 100px;
-  @media (max-width: 768px) {
-    padding: 0;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 16px;
+  width: min(100% - 20px, 800px);
+  margin: auto;
+  // .inputForm{
+  //   background: var(--mainColor10);
+  // }
+  .form-label {
+    color: var(--blackColor);
   }
-  .userInfo {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    background: var(--mainColor10);
-    padding: 20px;
-    border-radius: 16px;
-    min-width: 250px;
-  }
-  .selections {
-    min-width: 250px;
-    flex: 1;
-    h3 {
-      font-weight: bold;
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: var(--mainColor);
-    }
-    p {
-      color: #777;
-      font-weight: normal;
-    }
+}
 
-    ul {
-      padding: 8px 0;
-      padding-right: 16px;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      list-style: decimal;
-      li {
-        font-size: 14px;
-      }
-    }
+.selections {
+  width: min(100% - 20px, 800px);
+  margin: auto;
+  background-color: var(--mainColor10);
+  padding: 20px 10px;
+  border-radius: 16px;
+  p {
+    padding: 8px 16px;
+    display: inline-block;
+    width: 48%;
   }
 }

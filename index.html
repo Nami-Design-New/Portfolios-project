@@ -519,39 +519,23 @@
         </div>
         <!-- step 2 -->
         <div class="panel ">
-          <!-- userSelection -->
-          <div class="userSelection">
-            <!-- info -->
-            <div class="userInfo">
-              <!-- input -->
-              <div class="inputField">
-                <label class="form-label"> الاسم : </label>
-                <input type="text" class="inputForm" placeholder=" مثال : محمد احمد ">
-              </div>
-              <!-- input -->
-              <div class="inputField">
-                <label class="form-label"> البريد الالكتروني : </label>
-                <input type="email" class="inputForm" placeholder=" مثال : mail@mail.com ">
-              </div>
-              <!-- input -->
-              <div class="inputField">
-                <label class="form-label"> الجوال : </label>
-                <input type="number" class="inputForm" placeholder=" مثال : 0500000000 ">
-              </div>
+
+          <!-- info -->
+          <div class="userInfo">
+            <!-- input -->
+            <div class="inputField">
+              <label class="form-label"> الاسم : </label>
+              <input type="text" class="inputForm" placeholder=" مثال : محمد احمد ">
             </div>
-            <!-- selections -->
-            <div class="selections">
-              <h3> الباقة البرونزية </h3>
-              <ul>
-                <li> موقع تعريفي من 1 ال 4 صفحات </li>
-                <li> دومين واستضافة مجانيين لمدة سنة </li>
-                <li> عدد 2 ايميل رسمي مجاني </li>
-                <li> فيديو 30 ثانية </li>
-                <li> 3 تصميمات سوشيال ميديا </li>
-                <li> بيزنيس كارد </li>
-                <li> 4 social calender حسب اختيار العميل </li>
-                <li> portfolio as PDF </li>
-              </ul>
+            <!-- input -->
+            <div class="inputField">
+              <label class="form-label"> البريد الالكتروني : </label>
+              <input type="email" class="inputForm" placeholder=" مثال : mail@mail.com ">
+            </div>
+            <!-- input -->
+            <div class="inputField">
+              <label class="form-label"> الجوال : </label>
+              <input type="number" class="inputForm" placeholder=" مثال : 0500000000 ">
             </div>
           </div>
           <!-- button control -->
@@ -562,6 +546,18 @@
         </div>
         <!-- step 3 -->
         <div class="panel ">
+
+          <!-- selections -->
+          <div class="selections">
+            <p> موقع تعريفي من 1 ال 4 صفحات </p>
+            <p> دومين واستضافة مجانيين لمدة سنة </p>
+            <p> عدد 2 ايميل رسمي مجاني </p>
+            <p> فيديو 30 ثانية </p>
+            <p> 3 تصميمات سوشيال ميديا </p>
+            <p> بيزنيس كارد </p>
+            <p> 4 social calender حسب اختيار العميل </p>
+            <p> portfolio as PDF </p>
+          </div>
           <!-- button control -->
           <div class="btnGroup">
             <button class="defaultBtn black jsBtnPrev" type="button">السابق </button>
@@ -822,41 +818,52 @@
         stepPrevBtnClass: '.jsBtnPrev',
         stepNextBtnClass: '.jsBtnNext'
       };
-      const removeClasses = (elemSet, className) => {
-        elemSet.removeClass(className);
-      };
+
       const findParent = (elem, parentClass) => {
         return elem.closest(parentClass);
       };
+
       const getActiveStep = elem => {
         return $(DOMstrings.stepsBtnClass).index(elem);
       };
+
       const setActiveStep = activeStepNum => {
         $(DOMstrings.stepsBtnClass).removeClass('jsActive').slice(0, activeStepNum + 1).addClass('jsActive');
       };
+
       const getActivePanel = () => {
         return $(DOMstrings.stepFormPanelClass + '.jsActive');
       };
+
       const setActivePanel = activePanelNum => {
         $(DOMstrings.stepFormPanelClass).removeClass('jsActive');
         $(DOMstrings.stepFormPanelClass).eq(activePanelNum).addClass('jsActive');
         setFormHeight();
       };
+
       const setFormHeight = () => {
-        $(DOMstrings.stepsForm).height(getActivePanel().outerHeight());
+        const activePanel = getActivePanel();
+        const newHeight = activePanel.outerHeight();
+        $(DOMstrings.stepsForm).animate({
+          height: newHeight
+        }, 500);
       };
+
       $(DOMstrings.stepsBar).on('click', DOMstrings.stepsBtnClass, function () {
         setActiveStep(getActiveStep(this));
         setActivePanel(getActiveStep(this));
       });
+
       $(DOMstrings.stepsForm).on('click', DOMstrings.stepPrevBtnClass + ', ' + DOMstrings.stepNextBtnClass, function () {
         const activePanelNum = $(DOMstrings.stepFormPanelClass).index(findParent(this, DOMstrings.stepFormPanelClass));
         let nextActivePanelNum = this.classList.contains(DOMstrings.stepPrevBtnClass.slice(1)) ? activePanelNum - 1 : activePanelNum + 1;
         setActiveStep(nextActivePanelNum);
         setActivePanel(nextActivePanelNum);
       });
+
       $(window).on('load resize', setFormHeight);
     });
+
   </script>
 </body>
 
