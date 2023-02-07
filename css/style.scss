@@ -1869,7 +1869,7 @@ footer {
   }
   .form {
     position: relative;
-    height: max-content;
+    overflow: hidden;
     .panel {
       position: absolute;
       top: 0;
