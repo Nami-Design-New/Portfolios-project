@@ -1692,9 +1692,6 @@ footer .copyR img {
   filter: invert(1);
 }
 @media (max-width: 768px) {
-  .testimonials .swiper-slide {
-    height: 100%;
-  }
   .testimonials .card {
     padding-top: 70px;
   }
@@ -2123,15 +2120,88 @@ footer .copyR img {
   color: var(--blackColor);
 }
 
-.selections {
+.summary {
   width: min(100% - 20px, 800px);
-  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  margin: 14px auto;
+}
+.summary .selections {
   background-color: var(--mainColor10);
   padding: 20px 10px;
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+  min-width: 200px;
 }
-.selections p {
+.summary .selections p {
   padding: 8px 16px;
-  display: inline-block;
-  width: 48%;
+}
+.summary .selections h3 {
+  padding: 8px 16px;
+  font-weight: bold;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+.summary .selections::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -14px;
+  right: 0;
+  left: 0;
+  height: 14px;
+  background: linear-gradient(-45deg, var(--mainColor30) 33.333%, transparent 33.333%, transparent 66.667%, var(--mainColor30) 66.667%), linear-gradient(45deg, var(--mainColor30) 33.333%, transparent 33.333%, transparent 66.667%, var(--mainColor30) 66.667%);
+  background-size: 12px 40px;
+  background-position: 0 -20px;
+}
+.summary .selections.total {
+  background-color: rgba(0, 0, 0, 0.062745098);
+}
+.summary .selections.total h3 {
+  background-color: var(--textColor);
+  color: var(--whiteColor);
+}
+.summary .selections.total::before {
+  background: linear-gradient(-45deg, rgba(0, 0, 0, 0.1882352941) 33.333%, transparent 33.333%, transparent 66.667%, rgba(0, 0, 0, 0.1882352941) 66.667%), linear-gradient(45deg, rgba(0, 0, 0, 0.1882352941) 33.333%, transparent 33.333%, transparent 66.667%, rgba(0, 0, 0, 0.1882352941) 66.667%);
+  background-size: 12px 40px;
+  background-position: 0 -20px;
+}
+.summary .selections.total ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.summary .selections.total ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.1882352941);
+}
+.summary .selections.total ul li span {
+  font-weight: bold;
+}
+.summary .selections.total .totalPrice {
+  margin-top: auto;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: var(--mainColor);
+  color: var(--whiteColor);
+  border-radius: 4px;
+}
+.summary .selections.total .totalPrice span {
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
